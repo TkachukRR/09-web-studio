@@ -1,0 +1,49 @@
+.hero {
+    text-align: center;
+
+    color: $colorTextThird;
+    background-color: $colorBgThird;
+
+}
+.hero__container {
+    @include centeredFlex()
+    flex-direction: column;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+
+    height: 400px;
+
+    @media screen and (min-width: $desktop) {
+        height: 600px;
+
+        max-width: 1600px;
+        width: 100vw;
+    }
+}
+
+
+
+.hero__title {
+    margin: 0 auto 30px;
+
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    max-width: 360px;
+
+    @media screen and (min-width: $desktop) {
+        font-size: 44px;
+        line-height: 1.36;
+
+        max-width: 696px;
+    }
+}
+.hero__button {
+    @extend %btn
+}

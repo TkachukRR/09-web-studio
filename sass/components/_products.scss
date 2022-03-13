@@ -1,0 +1,170 @@
+.portfolio-main {
+}
+
+.products-title {
+    @extend %is-hidden;
+}
+
+.buttons__list {
+    @include centeredFlex();
+    @extend %list;
+
+    justify-content: start;
+
+    flex-wrap: wrap;
+
+    margin: 0 0 25px;
+
+    @media screen and (min-width: $tablet) {
+        justify-content: center;
+        margin: 0 0 30px;
+    }
+}
+
+.buttons__item {
+    margin-bottom: 15px;
+
+    @media screen and (min-width: $tablet) {
+        margin-bottom: 0;
+    }
+
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
+}
+.button {
+}
+
+.button__checkbox {
+    z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+.button__lable {
+    display: inline-block;
+	cursor: pointer;
+    
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    padding: 6px 22px;
+
+    color: $colorTextSecond;
+
+    background-color: $colorBgSecond;
+
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0), 0px 1px 2px rgba(0, 0, 0, 0), 0px 2px 2px rgba(0, 0, 0, 0);
+    border-radius: 4px;
+
+    transition: background-color 250ms ease-in-out, color 250ms ease-in-out;
+
+    .button__checkbox:checked + &,
+    &:focus,
+    &:hover {
+        color: $colorTextThird;
+
+        background-color: $colorButton;
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.cards {
+    @extend %list;    
+
+    margin: -15px;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.cards__item {
+    margin: 15px;
+
+    &:hover {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    &:hover .cards__overlay {
+        transform: translateY(0);
+    
+        transition: transform 250ms ease-in-out;
+    }
+
+    @media screen and (min-width: $tablet) {
+        flex-basis: calc((100% - 2 * 30px) / 2);
+    }
+}
+
+.cards__link {
+    @extend %link;
+}
+
+.cards__img {
+    display: block;
+
+    width: 100%;
+}
+
+.cards__properties {
+    border: 1px solid #EEEEEE;
+    border-top: 0;
+
+    padding: 20px 24px; 
+}
+
+.cards__lable {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+
+    color: $colorTextSecond;
+
+    margin: 0 0 4px;
+}
+
+.cards__description {
+    font-size: 16px;
+    line-height: 1.88;
+
+    margin: 0;
+}
+
+.cards__pict{
+    position: relative;
+
+    overflow: hidden;
+}
+
+.cards__overlay {
+    position: absolute;
+
+    font-size: 18px;
+    line-height: 1.56;
+    color: $colorTextThird;
+    background-color: rgba(33, 150, 243, 0.9);
+
+    padding: 77px 24px;
+
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    bottom: 0;
+
+    transform: translateY(100%);
+
+    p {
+        margin: 0;
+    }
+}
+
+
+
+
+
+

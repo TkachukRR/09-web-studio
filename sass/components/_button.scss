@@ -1,0 +1,24 @@
+%btn {
+    min-width: 200px;
+    min-height: 50px;
+
+    padding: 10px 25px;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    border: none;
+    border-radius: 4px;
+    
+    color: $colorTextThird;
+    background-color: $colorButton;
+
+    transition: background-color 250ms ease-in-out;
+
+    &:hover, &:active {
+        background-color: $colorButtonActive;
+    }
+} 
+// @extend %btn;

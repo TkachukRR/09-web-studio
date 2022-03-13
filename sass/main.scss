@@ -1,0 +1,28 @@
+@import './base/normalized';
+
+@import './utils/variables';
+@import './utils/breakpoints';
+@import './utils/general';
+@import './utils/placeholders';
+@import './utils/mixins';
+@import './utils/is-hidden';
+
+@import './components/container';
+@import './components/logo';
+@import './components/burger';
+@import './components/button';
+@import './components/social';
+
+@import './components/page-header';
+@import './components/hero';
+@import './components/section-benefits';
+@import './components/section-works';
+@import './components/section-team';
+@import './components/section-customers';
+@import './components/page-footer';
+
+@import './components/modal';
+
+@import './components/products';
+
+

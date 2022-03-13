@@ -1,0 +1,76 @@
+.benefits {
+    background-color: $colorBgFirst;
+}
+
+.benefits__title {
+    @extend %is-hidden
+}
+
+.benefits__list {
+    @extend %list;
+
+    @media screen and (min-width: $tablet) {
+        @include centeredFlex();
+        flex-wrap: wrap;
+
+        align-items:stretch;
+
+        margin: -15px;
+    }
+}
+
+.benefits__item {
+    @media screen and (max-width: calc($tablet-1px)) {
+        &:not(:last-child) {
+        margin: 0 0 30px;
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        flex-basis: calc((100% - 2 * 30px) / 2);
+
+        margin: 15px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        flex-basis: calc((100% - 4 * 30px) / 4);
+
+        margin: 15px;
+    }
+}
+
+.benefits__icon {
+    text-align: center;
+
+    background-color: $colorBgSecond;
+    border-radius: 4px;
+
+    padding: 25px 0;
+
+    margin: 0 0 30px;
+}
+.benefits__lable {
+    text-align: center;
+    text-transform: uppercase;
+
+    font-weight: 700;
+    line-height: 1.14;
+
+    color: $colorTextSecond;
+
+    margin: 0 0 10px;
+
+    @media screen and (min-width: $tablet) {
+        text-align: left;
+    }
+}
+.benefits__description {
+    padding: 0;
+    margin: 0;
+
+    line-height: 1.71;
+}
+.icon {
+}
+.icon-antenna {
+}

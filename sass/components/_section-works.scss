@@ -1,0 +1,44 @@
+
+.works {
+    display: none;
+
+
+    @media screen and (min-width: $desktop) {
+        display: block;
+    }
+}
+
+.works__title {
+    @extend %title;
+}
+.works__list {
+    @extend %list;
+
+    display: flex;
+    justify-content: space-between;
+}
+.works__item {
+    position: relative;
+
+    max-width: calc((100% - 2 * 30) / 3);
+    line-height: 0;
+
+}
+
+.works__description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.14;
+
+    background-color: rgba(47, 48, 58, 0.8);
+    color: $colorTextThird;
+
+    padding: 27px 0;
+    margin: 0;    
+}

@@ -1,0 +1,26 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    background-color: $colorBgFirst;
+
+    color: $colorTextFirst;
+
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.section {
+    padding: 60px 0;
+
+    @media screen and (min-width: $desktop) {
+        padding: 94px 0;
+    }
+}

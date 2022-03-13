@@ -1,0 +1,198 @@
+.footer {
+    background-color: $colorBgThird;
+}
+
+.footer__container {
+    padding: 60px 15px;
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+
+        align-items: baseline;
+    }
+}
+
+.footer__wrapper {
+    @media screen and (min-width: $tablet) {
+        @include centeredFlex();
+        justify-content:space-around;
+    }
+    @media screen and (min-width: $desktop) {
+        flex-basis: 50%;
+        justify-content: start;
+
+        align-items: baseline;
+    }
+
+}
+
+.footer__contacts {
+    text-align: center;
+
+    @media screen and (min-width: $desktop) {
+        margin: 0 70px 0 0;
+    }
+}
+
+.footer__logo{
+    @extend %logo;
+    @extend %link;
+
+    margin: 0 0 20px;
+
+    &--decoration{
+        color: $colorLogoThird;
+    }
+}
+
+.footer__list {
+    @extend %list;
+    margin: 0 0 60px;
+}
+
+.footer__item {
+    color: $colorTextThird;
+
+    
+    line-height: 1.71;
+
+    opacity: 0.6;
+
+    transition: opacity 250ms ease;
+
+    font-style: normal;
+
+    &:active,
+    &:hover {
+        opacity: 1;
+    }
+
+    &:not(:last-child) {
+        margin: 0 0 8px;
+        }
+
+    .link {
+        @extend %link;
+    }
+}
+
+.footer-social__title,
+.subscription__title {
+    text-align: center;
+
+    text-transform: uppercase;
+
+    font-weight: 700;
+    line-height: 1.14;
+
+    color: $colorTextThird;
+
+    
+    margin: 0 0 20px;
+}
+
+.social__item-grey {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social__list {
+    margin: 0 0 60px;
+}
+
+.subscription__title{
+}
+
+.subscription {
+    width: 100%;
+    
+    @include centeredFlex();
+    flex-direction: column;
+
+    margin: 0 auto;
+
+    @media screen and (min-width: $tablet) {
+        max-width: 450px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        flex-basis: 50%;
+        max-width: 100%;
+        margin: 0;
+
+        align-items: baseline;
+    }
+}
+
+.subscription__wrapper{
+    position: relative;
+
+    width: 100%;
+    margin-right: 12px;
+}
+
+.subscription__form {
+    width: 100%;
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+    }
+}
+
+.subscription__email {
+    display: inline-block;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    font-size: 16px;
+    line-height: 1.25;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    background-color: transparent;
+
+    min-height: 50px;
+    width: 100%;
+
+    padding-left: 70px;
+
+    margin-bottom: 20px;
+    @media screen and (min-width: $desktop) {
+        margin: 0;
+    }
+}
+
+.subscription__text {
+    position: absolute;
+
+    left: 16px;
+    top: 40%;
+    transform: translateY(-50%);
+
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+
+    @media screen and (min-width: $desktop) {
+        top: 50%;
+    }
+}
+
+.subscription__submit {
+    @include centeredFlex();
+    @extend %btn;
+    margin: 0 auto;
+
+    // background-color: $colorButton;
+
+    &:hover,
+    &:active {
+        background-color: $colorButtonActive;
+    }
+}
+
+.icon-send {
+    margin-left: 10px;
+}

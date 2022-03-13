@@ -1,0 +1,44 @@
+.social {
+    @extend %list;
+    @include centeredFlex();
+}
+.social__item {
+    padding: 12px;
+    border-radius: 50%;
+
+    background-color: transparent;
+
+    transition: background-color 250ms ease-in-out;
+
+    &:hover,
+    &:active {
+        background-color: $colorTextActive;
+        cursor: pointer;
+    }
+    
+
+    &:hover .social__link,
+    &:active .social__link{
+        color: $colorTextThird;
+    }
+
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
+}
+
+.social__link {
+    @extend %link;
+    color: $colorSocialLinks;
+
+    transition: color 250ms ease;
+}
+
+.icon-instagram,
+.icon-twitter,
+.icon-facebook,
+.icon-linkedin {
+    display: block;
+
+    fill: currentColor;
+}
